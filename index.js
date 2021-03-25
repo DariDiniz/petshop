@@ -101,11 +101,20 @@ const adicionarPet = (nome, tipo, idade, raca, peso, tutor, contato, vacinado, s
     
 }
 
-const darBanhoPet = (){}
-const tosarPetPet = (){}
-const apararUnhasPetPet = (){}
+const darBanhoPet = (animal) => {
+    for(let pet of pets){
+        if (animal == pet.nome){
+            pet.servicos.includes('banho');
+            console.log(`${pet.nome} está de banho tomado!`);
+            }
+}
+}
+
+const tosarPetPet = () => {}
+const apararUnhasPetPet = () => {}
 //listarPets();
 //vacinarPet("Snooy");
 //campanhaVacina();
 //adicionarPet("Scooby", "cachorro", 12, "SRD", 25, "Salsicha", "22", true, "banho");
 //listarPets();
+darBanhoPet ("Snoopy");
