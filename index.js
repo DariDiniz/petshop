@@ -106,8 +106,9 @@ const adicionarPet = (nome, tipo, idade, raca, peso, tutor, contato, vacinado, s
 const darBanhoPet = (animal) => {
     for(let pet of pets){
         if (animal == pet.nome){
-            pet.servicos.includes("banho");
-            console.log(`${animal} tomou banho em: ${moment().locale('pt').format('DD/MM/YY, hA')}!`);
+            pet.servicos.push(
+                `banho: ${moment().format('DD-MM-YYYY')}`);
+            console.log(`${animal} está de banho tomado!`);
             }
 }
 }
@@ -115,15 +116,27 @@ const darBanhoPet = (animal) => {
 const tosarPet = (animal) => {
     for(let pet of pets){
         if (animal == pet.nome){
-            pet.servicos.includes("tosa");
-            console.log(`${animal} foi tosado em: ${moment().locale('pt').format('DD/MM/YY, hA')}!`);
+            pet.servicos.push(
+                `tosa: ${moment().format('DD-MM-YYYY')}`);
+            console.log(`${animal} está com cabelinho na régua!`);
             }
 }
 }
-const apararUnhasPetPet = () => {}
+
+const apararUnhasPet = (animal) => {
+    for(let pet of pets){
+        if (animal == pet.nome){
+            pet.servicos.push(
+                `corte de unhas em data: ${moment().format('DD-MM-YYYY')}`);
+            console.log(`${animal} está de unhas aparadas!`);
+            }
+}
+}
+
 //listarPets();
 //vacinarPet("Snooy");
 //campanhaVacina();
 //adicionarPet("Scooby", "cachorro", 12, "SRD", 25, "Salsicha", "22", true, "banho");
 //darBanhoPet ("Snoopy");
-tosarPet ("Snoopy");
+//tosarPet ("Snoopy");
+//apararUnhasPet("Snoopy");
