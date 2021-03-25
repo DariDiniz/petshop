@@ -38,8 +38,8 @@ let pets = [{
 // console.log(pets);
 
 const listarPets = () => {
-    for(let i = 0; i < pets.length; i++){
-        console.log(pets[i].nome);
+    for(let pet of pets){
+        console.log(`${pet.nome}, ${pet.idade}, ${pet.tipo}, ${pet.raca} `); //Usei crase
     }
 }
 
