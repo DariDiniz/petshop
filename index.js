@@ -1,3 +1,5 @@
+var moment = require('moment');
+
 const nomePetshop = "PETSHOP AVANADE"
 
 let pets = [{
@@ -104,17 +106,24 @@ const adicionarPet = (nome, tipo, idade, raca, peso, tutor, contato, vacinado, s
 const darBanhoPet = (animal) => {
     for(let pet of pets){
         if (animal == pet.nome){
-            pet.servicos.includes('banho');
-            console.log(`${pet.nome} está de banho tomado!`);
+            pet.servicos.includes("banho");
+            console.log(`${animal} tomou banho em: ${moment().locale('pt').format('DD/MM/YY, hA')}!`);
             }
 }
 }
 
-const tosarPetPet = () => {}
+const tosarPet = (animal) => {
+    for(let pet of pets){
+        if (animal == pet.nome){
+            pet.servicos.includes("tosa");
+            console.log(`${animal} foi tosado em: ${moment().locale('pt').format('DD/MM/YY, hA')}!`);
+            }
+}
+}
 const apararUnhasPetPet = () => {}
 //listarPets();
 //vacinarPet("Snooy");
 //campanhaVacina();
 //adicionarPet("Scooby", "cachorro", 12, "SRD", 25, "Salsicha", "22", true, "banho");
-//listarPets();
-darBanhoPet ("Snoopy");
+//darBanhoPet ("Snoopy");
+tosarPet ("Snoopy");
