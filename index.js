@@ -14,15 +14,15 @@ let pets = [{
     servicos: ["banho", "tosa"]
 },
 {
-        nome: "Snoopy",
-        tipo: "cachorro",
-        idade: 13,
-        raca: "Beagle",
-        peso: 3,
-        tutor: "Charlie Brown",
-        contato: "(11) 98374-9573",
-        vacinado: false,
-        servicos: ["banho"]
+    nome: "Snoopy",
+    tipo: "cachorro",
+    idade: 13,
+    raca: "Beagle",
+    peso: 3,
+    tutor: "Charlie Brown",
+    contato: "(11) 98374-9573",
+    vacinado: false,
+    servicos: ["banho"]
 },
 {
     nome: "Salem",
@@ -37,8 +37,6 @@ let pets = [{
 }
 ];
 
-// console.log(pets);
-
 const listarPets = () => {
     for(let pet of pets){
         //console.log(`${pet.nome}, ${pet.idade}, ${pet.tipo}, ${pet.raca} `); //Usei crase
@@ -49,20 +47,26 @@ const listarPets = () => {
 const vacinarPet = (animal) => {
     let tamanhoDaLista = pets.length;
     let i = 1;
+    console.log(1);
 
     for(let pet of pets){
 
             if (animal == pet.nome){
                 if (pet.vacinado == true){
+                    console.log(2);
                     console.log(`${pet.nome} não precisa ser vacinado(a) `);
                     break;
+                    console.log(2.1);
                 } else {
                     pet.vacinado = true;
                     console.log(`Agora ${pet.nome} está vacinado ;D`);
                     break;
+                    console.log(2.2);
                 }
         } else {
-            if (tamanhoDaLista == 1){
+            console.log(3);
+            if (tamanhoDaLista == i){
+                console.log(3.1);
                 console.log("Esse pet ainda não estar registrado");
                 break;             
             } 
