@@ -1,4 +1,4 @@
-var moment = require('moment');
+const moment = require('moment');
 
 const nomePetshop = "PETSHOP AVANADE"
 
