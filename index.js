@@ -41,6 +41,8 @@ const vacinarPet = (animal) => {
 
 const campanhaVacina = () => {
     let i =0;
+    console.log(`Campanha de Vacinação de ${moment().format('YYYY')}`);
+    
     for(let pet of pets){
 
                 if (pet.vacinado == false){
@@ -101,7 +103,7 @@ const apararUnhasPet = (animal) => {
 
 //listarPets();
 //vacinarPet("Snoopy");
-campanhaVacina();
+//campanhaVacina();
 //adicionarPet("Scooby", "cachorro", 12, "SRD", 25, "Salsicha", "22", true, "banho");
 //darBanhoPet ("Snoopy");
 //tosarPet ("Snoopy");
