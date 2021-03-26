@@ -1,7 +1,7 @@
 const moment = require('moment');
-let dadospet = require('./dadosPets.json');
+let pets = require('./dadosPet.json');
 
-const nomePetshop = "PETSHOP AVANADE"
+const nomePetshop = "PETSHOP AVANADE";
 
 
 
@@ -105,7 +105,7 @@ const apararUnhasPet = (animal) => {
 }
 }
 
-//listarPets();
+listarPets();
 //vacinarPet("Snooy");
 //campanhaVacina();
 //adicionarPet("Scooby", "cachorro", 12, "SRD", 25, "Salsicha", "22", true, "banho");
