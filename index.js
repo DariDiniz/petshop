@@ -15,26 +15,20 @@ const listarPets = () => {
 const vacinarPet = (animal) => {
     let tamanhoDaLista = pets.length;
     let i = 1;
-    console.log(1);
 
     for(let pet of pets){
 
             if (animal == pet.nome){
                 if (pet.vacinado == true){
-                    console.log(2);
                     console.log(`${pet.nome} não precisa ser vacinado(a) `);
                     break;
-                    console.log(2.1);
                 } else {
                     pet.vacinado = true;
                     console.log(`Agora ${pet.nome} está vacinado ;D`);
                     break;
-                    console.log(2.2);
                 }
         } else {
-            console.log(3);
             if (tamanhoDaLista == i){
-                console.log(3.1);
                 console.log("Esse pet ainda não estar registrado");
                 break;             
             } 
@@ -105,9 +99,9 @@ const apararUnhasPet = (animal) => {
 }
 }
 
-listarPets();
-//vacinarPet("Snooy");
-//campanhaVacina();
+//listarPets();
+//vacinarPet("Snoopy");
+campanhaVacina();
 //adicionarPet("Scooby", "cachorro", 12, "SRD", 25, "Salsicha", "22", true, "banho");
 //darBanhoPet ("Snoopy");
 //tosarPet ("Snoopy");
